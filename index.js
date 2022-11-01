@@ -55,7 +55,7 @@ var submenuItem = document.querySelectorAll(".sub-header-item")
             a1.style.display = "none"
             a2.style.display = "none"
             a3.style.display = "block"
-            
+
     }}
 
 // MOBILE MENU //
@@ -81,6 +81,9 @@ function showmobile() {
             menuMobileList.style.display = "block"
         }
     }
+
+
+    
 
 
 
