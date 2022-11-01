@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+/* GENERAL */
+
+html {
+	scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Fira Code', monospace;
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+}
+
+body {
+    background-color: white;
+}
+
+/* SUB HEADER */
+
+#sub-header ul{
+    width: 100%;
+    list-style-type: none;
+    background: repeating-linear-gradient(90deg, #252526, #373737, #252526);
+    position: fixed;
+    top: 0px;
+    background-repeat:repeat-x;
+    background-size: 400% 100%;
+    animation: colorChange 7s linear infinite;
+    z-index: 2;
+}
+
+#sub-header li {
+    float: left;
+    border-right: 1px solid #1c1c1c ;
+}
+
+
+
+.sub-header-item {
+    display: block;
+    background-color: #2D2D2D;
+    padding: 10px;
+    color: white;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.sub-header-active {
+    background-color:#1e1e1e ;
+    animation: subheaderbtn .5s forwards;
+}
+
+#sub-header li a:hover {
+    background-color: #1E1E1E;
+    transition-duration: .5s;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/header-background.jpg");
+    
+    }
+    header:after {
+        z-index: 0;
+        content:'';
+        position:absolute;
+        top: 38px;
+        bottom:0;
+        left:0;
+        right:0;
+        background: linear-gradient(to bottom, #000000, #1c1c1ccc);
+        }   
+
+.header {
+    position: relative;
+    width: 100%;
+    top: 38px;
+    z-index: 1;
+
+}
+
+.header-scroll {
+    position: fixed;
+    width: 100%;
+    top: 38px;
+    z-index: 1;
+    background-image:linear-gradient(to bottom, #1c1c1c, #1c1c1cd9);
+    height: 150px;
+    animation: headerfixed .8s forwards;
+    }
+
+.header-back {
+    position: relative;
+    width: 100%;
+    top: 38px;
+    z-index: 1;
+    animation: headerback 1s forwards;
+    background-image:linear-gradient(to bottom, #1c1c1c, #1c1c1cd9);
+}
+/* LOGO */
+
+#logo {
+    display: inline;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+}
+
+#logo h1 {
+    display: inline;
+    font-size: 40px;
+}
+
+.logo-content {
+    display: inline-block
+}
+
+.logo-content p {
+    margin-bottom: -5px;
+    display: inline-block;
+    overflow: hidden;
+    width: 0;
+    color: white;
+    animation: index 0.6s steps(40, end) forwards;
+    
+}
+
+/* MENU NAV */
+
+#menu-nav ul {
+    list-style-type: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 10px;
+}
+
+#menu-nav li {
+    float: left;
+    padding-right: 10px;
+    
+     
+}
+
+#menu-nav li a {
+    font-weight: 100;
+    font-size: 20px;
+    padding: 10px;
+    transition-duration: 0.3s;
+}
+
+/* MENU MOBILE */
+
+#menu-nav-mobile {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+#menu-nav-mobile ul {
+    display: none;
+}
+
+.nav-mobile-icon {
+    cursor: pointer;
+}
+
+.mobile-icon-active {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.mobile-icon-bar {
+    width: 30px;
+    height: 5px;
+    margin-bottom: 5px;
+    background-color: white;
+}
+
+.bar-active {
+    background-color: black;
+}
+
+/* MENU ITEM 1 */
+
+#menu-item-1{
+    color: #569CB3;
+}
+    #menu-item-1:hover{
+        color: black;
+        background-color: white;
+        border-radius: 3px;
+    }
+        #menu-item-1:hover::after{
+            content: "()";
+            position: relative;
+            animation: showafter 1s forwards;
+        }
+
+/* MENU ITEM 2 */        
+
+#menu-item-2{
+    color: #DCB862;
+}
+    #menu-item-2:hover{
+        color: black;
+        background-color: white;
+        border-radius: 3px;
+    }
+        #menu-item-2:hover::after{
+            content: "{}";
+            position: relative;
+            animation: showafter 1s forwards;
+        }
+
+/* MENU ITEM 3 */
+
+#menu-item-3{
+    color: #C586C0;
+}
+    #menu-item-3:hover{
+        color: black;
+        background-color: white;
+        border-radius: 3px;
+    }
+        #menu-item-3:hover::after{
+            content: "[]";
+            position: relative;
+            animation: showafter 1s forwards;
+            
+        }
+
+/* MENU ITEM 3 */
+
+#menu-item-4{
+    color: #4EC98F;
+}
+    #menu-item-4:hover{
+        color: black;
+        background-color: white;
+        border-radius: 3px;
+        transition-delay: 0.2;
+    }
+    #menu-item-4:hover::after{
+        content: "=>";
+        position: relative;
+        animation: showafter 1s forwards;
+
+    }
+
+/* HEADER ANIMATIONS */
+
+#animations {
+    position: relative;
+    top: 70px;
+    left: 10px;
+    display: inline-block;
+}
+
+/* INDEX ANIMATION */
+
+.index-animation {
+    display: none;
+}
+
+.index-animation .a1 {
+    white-space: nowrap;
+    border-right: 2px solid transparent;
+    overflow: hidden;
+    width: 0;
+    color: white;
+    animation: index 3s steps(60, end) forwards,
+    blink .8s 5;
+    animation-delay: 1s;
+    transition-delay: 1s; 
+}
+
+.index-animation .a2 {
+    white-space: nowrap;
+    border-right: 2px solid transparent;
+    overflow: hidden;
+    width: 0;
+    color: white;
+    animation: index 3s steps(40, end) forwards,
+    blink .8s 5;
+    animation-delay: 5s;
+    transition-delay: 5s;   
+
+}
+
+.index-animation .a3 {
+    white-space: nowrap;
+    border-right: 2px solid transparent;
+    overflow: hidden;
+    width: 0;
+    color: white;
+    animation: index 3s steps(40, end) forwards,
+    blink .8s infinite;
+    animation-delay: 9s;
+    transition-delay: 9s;  
+
+}
+
+/* STYLE ANIMATION */
+
+.style-animation {
+    display: none;
+}
+
+.style-animation .a1 {
+    white-space: nowrap;
+    border-right: .15em solid transparent;
+    overflow: hidden;
+    width: 0;
+    color: white;
+    animation: index 3s steps(60, end) forwards,
+    blink .8s 5;
+    animation-delay: 1s;
+    transition-delay: 1s; 
+}
+
+.style-animation .a2 {
+    white-space: nowrap;
+    border-right: .15em solid transparent;
+    overflow: hidden;
+    width: 0;
+    color: white;
+    animation: index 3s steps(40, end) forwards,
+    blink .8s 5;
+    animation-delay: 5s;
+    transition-delay: 5s;   
+
+}
+
+.style-animation .a3 {
+    white-space: nowrap;
+    border-right: .15em solid transparent;
+    overflow: hidden;
+    width: 0;
+    color: white;
+    animation: index 3s steps(40, end) forwards,
+    blink .8s infinite;
+    animation-delay: 9s;
+    transition-delay: 9s;  
+
+}
+
+/* SCRIPT ANIMATION */
+
+.script-animation {
+    display: none;
+}
+
+.script-animation .a1 {
+    white-space: nowrap;
+    border-right: .15em solid transparent;
+    overflow: hidden;
+    width: 0;
+    color: white;
+    animation: index 3s steps(60, end) forwards,
+    blink .8s 5;
+    animation-delay: 1s;
+    transition-delay: 1s; 
+}
+
+.script-animation .a2 {
+    white-space: nowrap;
+    border-right: .15em solid transparent;
+    overflow: hidden;
+    width: 0;
+    color: white;
+    animation: index 3s steps(40, end) forwards,
+    blink .8s 5;
+    animation-delay: 5s;
+    transition-delay: 5s;   
+
+}
+
+.script-animation .a3 {
+    white-space: nowrap;
+    border-right: .15em solid transparent;
+    overflow: hidden;
+    width: 0;
+    color: white;
+    animation: index 3s steps(40, end) forwards,
+    blink .8s infinite;
+    animation-delay: 9s;
+    transition-delay: 9s;
+}
+
+/* KEY FRAMES */
+
+@keyframes subheaderbtn {
+    0% { top: 0px;}
+    50% {position: relative; top: 3px;}
+    100% {top: 0px;}
+}
+
+@keyframes showafter {
+    0% {left: -5px; opacity: 0;}
+    100% {left: 2px; opacity: 1;}
+}
+
+@keyframes index {
+    from { width: 0}
+    to { width: 100% }
+}
+
+@keyframes blink {
+    from { border-color: transparent; }
+    to { border-color: white; } 
+}
+
+@keyframes colorChange {
+    0%{background-position:100% 50%}
+    100%{background-position:-33% 50%} 
+}
+
+@keyframes headerfixed {
+    0% {right: 300px; opacity: 0;}
+    100% {right: 0px; opacity: 1;}
+}
+
+@keyframes headerback {
+    0% {opacity: 0; left: 300px ; }
+    100% {opacity: 1; left: 0px; background-image:linear-gradient(to bottom, transparent, transparent);}
+    
+}
+
+/* REPONSIVE CSS */
+
+@media only screen and (max-width: 1000px) {
+    #logo h1 { 
+        font-size: 30px;
+    }
+
+    #menu-nav li a {
+        font-size: 16px;
+    }
+
+    #animations p {
+        font-size: 13px;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    #logo h1 { 
+        font-size: 30px;
+    }
+
+    #menu-nav {
+        display: none;
+    }
+
+    #menu-nav-mobile {
+        display: block;
+    }
+
+    #animations p {
+        font-size: 13px;
+    }
+  }
+
+  
+
+
+
+
+
