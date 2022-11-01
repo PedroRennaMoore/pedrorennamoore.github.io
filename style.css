@@ -453,12 +453,12 @@ header {
 }
 
 @keyframes headerfixed {
-    0% {right: 300px; opacity: 0;}
+    0% { opacity: 0;}
     100% {right: 0px; opacity: 1;}
 }
 
 @keyframes headerback {
-    0% {opacity: 0; left: 300px ; }
+    0% {opacity: 0;  }
     100% {opacity: 1; left: 0px; background-image:linear-gradient(to bottom, transparent, transparent);}
     
 }
