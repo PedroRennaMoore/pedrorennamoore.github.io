@@ -60,16 +60,17 @@ body {
 /* HEADER */
 
 header {
-    background-size: 100vh;
+    
     background-image: url("images/header-background.jpg");
     z-index: 0;
+    background-size: cover;
     
     }
     header:after {
         z-index: 1;
         content:'';
         position: absolute;
-        background-size: 100vh;
+        height: 100vh;
         width: 100%;
         background: linear-gradient(to bottom, #000000, #1c1c1ccc);
         }   
