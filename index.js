@@ -62,8 +62,29 @@ var submenuItem = document.querySelectorAll(".sub-header-item")
             logo.innerHTML = logoContent3
     }}
 
+// MOBILE MENU //
 
-// HEADER CODE //
+function showmobile() {
+        let navMobile = document.querySelector("#menu-nav-mobile")
+        let IconBar = document.querySelectorAll(".mobile-icon-bar")
+
+        navMobile.classList.toggle("menu-nav-mobile-active")
+        for(let i in IconBar) {
+        IconBar[i].className += " bar-active" }
+        
+        menuMobileList = document.querySelector("#menu-nav-mobile ul")
+        if(menuMobileList.style.display == "block") {
+
+            menuMobileList.style.display = "none"
+            navMobile.classList.remove("menu-nav-mobile-active")
+            for(let i in IconBar) {
+                IconBar[i].className = "mobile-icon-bar" }
+
+        } else {
+
+            menuMobileList.style.display = "block"
+        }
+    }
 
 
 
