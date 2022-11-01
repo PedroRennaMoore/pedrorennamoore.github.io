@@ -169,23 +169,27 @@ header {
         text-align: center;
         border-radius: 3px;
         padding: 5px 10px;
+        z-index: 5;
+        
         
     }
 
 
 #menu-nav-mobile ul {
     display: none;
+    list-style-type: none;
 }
 
 .nav-mobile-icon {
     cursor: pointer;
-    padding: 8px;
+    padding: 3px;
     background-color: #000000;
     border-radius: 3px;
     transition: .5s;
     }
     .mobile-icon-active {
         background-color: white;
+
         
         
         
