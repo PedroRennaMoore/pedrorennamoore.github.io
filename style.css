@@ -60,12 +60,9 @@ body {
 /* HEADER */
 
 header {
-    
     height: 100vh;
     background-image: url("images/header-background.jpg");
     z-index: 0;
-    
-    
     }
     header:after {
         z-index: 1;
@@ -85,7 +82,7 @@ header {
 
 .header-scroll {
     position: fixed;
-    width: 100%;
+    
     top: 38px;
     z-index: 3;
     background-image:linear-gradient(to bottom, #1c1c1c, #1c1c1cd9);
