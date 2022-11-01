@@ -36,30 +36,26 @@ var submenuItem = document.querySelectorAll(".sub-header-item")
     let a2 = document.querySelector(".style-animation")
     let a3 = document.querySelector(".script-animation")
     let logo = document.querySelector(".logo-content")
-    let logoContent1 = " <p>.knowledge</p>"
-    let logoContent2 = " <p>.experience</p>"
-    let logoContent3 = " <p>.script</p>"
+    
 
     if (n == 1) {
 
             a1.style.display = "block"
             a2.style.display = "none"
             a3.style.display = "none"
-            logo.innerHTML = logoContent1
   
     } else if (n == 2) {
             
             a1.style.display = "none"
             a2.style.display = "block"
             a3.style.display = "none"
-            logo.innerHTML = logoContent2
             
     } else if (n == 3) {
             
             a1.style.display = "none"
             a2.style.display = "none"
             a3.style.display = "block"
-            logo.innerHTML = logoContent3
+            
     }}
 
 // MOBILE MENU //
