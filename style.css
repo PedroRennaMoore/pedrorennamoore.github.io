@@ -281,11 +281,10 @@ header {
     transform: translate(-50%, -50%);
     display: inline-block;
     font-size: 23px;
-    min-width: 300px;
-    max-width: 1000px;
+   
     text-align: center;
     border-radius: 3px;
-    padding: 50px;
+    
     
 }
 
