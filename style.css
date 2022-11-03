@@ -60,7 +60,7 @@ body {
 /* HEADER */
 
 header {
-    
+    height: 100vh;
     background-image: url("images/header-background.jpg");
     z-index: 0;
     background-size: cover;
@@ -249,8 +249,7 @@ header {
         #menu-item-3:hover::after{
             content: "[]";
             position: relative;
-            animation: showafter 1s forwards;
-            
+            animation: showafter 1s forwards; 
         }
 
 /* MENU ITEM 3 */
@@ -268,164 +267,168 @@ header {
         content: "=>";
         position: relative;
         animation: showafter 1s forwards;
-
     }
 
 /* HEADER ANIMATIONS */
 
-#animations {
-    z-index: 2;
+
+
+#slides {
+    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: inline-block;
-    font-size: 23px;
-   
-    text-align: center;
-    border-radius: 3px;
-    
-    
+    z-index: 2;
+    display: flex; 
 }
 
-#animations p {
+.slide {
+    box-shadow: 0px 2px 6px 0px #000000b0;
+    max-width: 500px;
+    min-width: 200px;
+    max-height: 300px;
+    min-height: 200px;
+    background-color: white;
+    padding: 40px 0px;
+    border-radius: 5px;
+    margin: 0px 10px;   
+}
+
+
+#slides p {
     margin-bottom: 5px;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transition: 1s;
 }
 
 /* INDEX ANIMATION */
 
-.index-animation {
-    display: none;
+.slide-before{
+    transform: perspective(1000px) rotateY(-45deg);
+    opacity: .8;
+    cursor: pointer;
+    
+}
+.slide-main{
+    transform: scale(1.2);
+    
+}
+.slide-after{
+    transform: perspective(1000px) rotateY(45deg);
+    opacity: .8;
+    cursor: pointer;
 }
 
-.index-animation .a1, .a2, .a3, .a4, .a5, .a6 {
+
+/* SLIDE 1 */
+
+.slide1 .a1, .a2, .a3, .a4, .a5, .a6 {
     white-space: nowrap;
     overflow: hidden;
     width: 0;
-    color: white;
+    color: black;
     animation: index 1s steps(70, end) forwards;
-    
-    
     } 
-    .index-animation .a1 {
+
+    .slide1 .a1{
+        animation-delay: 1s;
+        transition-delay: 1s; 
+    }
+    .slide1 .a2 {
+        animation-delay: 2.5s;
+        transition-delay: 2.5s; 
+    }
+    .slide1 .a3 {
+        animation-delay: 4s;
+        transition-delay: 4s; 
+    }
+    .slide1 .a4 {
+        animation-delay: 5.5s;
+        transition-delay: 5.5s; 
+    }
+    .slide1 .a5 {
+        animation-delay: 7s;
+        transition-delay: 7s; 
+    }
+    .slide1 .a6 {
+        animation-delay: 8.5s;
+        transition-delay: 8.5s; 
+    }
+
+/* SLIDE 2 */
+            
+
+.slide2 .a1, .a2, .a3, .a4, .a5, .a6 {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    color: black;
+    animation: index 1s steps(70, end) forwards;
+    } 
+
+    .slide2 .a1 {
         animation-delay: 1s;
         transition-delay: 1s; 
         }
-    .index-animation .a2 {
+    .slide2 .a2 {
         animation-delay: 2.5s;
         transition-delay: 2.5s; 
         }
-    .index-animation .a3 {
+    .slide2 .a3 {
         animation-delay: 4s;
-        transition-delay: 4s; 
+        transition-delay: 4s;
         }
-    .index-animation .a4 {
+    .slide2 .a4 {
         animation-delay: 5.5s;
         transition-delay: 5.5s; 
         }
-    .index-animation .a5 {
+    .slide2 .a5 {
         animation-delay: 7s;
         transition-delay: 7s; 
         }
-    .index-animation .a6 {
+    .slide2 .a6 {
         animation-delay: 8.5s;
         transition-delay: 8.5s; 
         }
+    
+ /* SLIDE 3 */
 
 
 
-/* STYLE ANIMATION */
-
-.style-animation {
-    display: none;
-}
-
-.style-animation .a1 {
+.slide3 .a1, .a2, .a3, .a4, .a5, .a6 {
     white-space: nowrap;
-    border-right: .15em solid transparent;
     overflow: hidden;
     width: 0;
-    color: white;
-    animation: index 3s steps(60, end) forwards,
-    blink .8s 5;
-    animation-delay: 1s;
-    transition-delay: 1s; 
-}
+    color: black;
+    animation: index 1s steps(70, end) forwards;
+    } 
 
-.style-animation .a2 {
-    white-space: nowrap;
-    border-right: .15em solid transparent;
-    overflow: hidden;
-    width: 0;
-    color: white;
-    animation: index 3s steps(40, end) forwards,
-    blink .8s 5;
-    animation-delay: 5s;
-    transition-delay: 5s;   
-
-}
-
-.style-animation .a3 {
-    white-space: nowrap;
-    border-right: .15em solid transparent;
-    overflow: hidden;
-    width: 0;
-    color: white;
-    animation: index 3s steps(40, end) forwards,
-    blink .8s infinite;
-    animation-delay: 9s;
-    transition-delay: 9s;  
-
-}
-
-/* SCRIPT ANIMATION */
-
-.script-animation {
-    display: none;
-}
-
-.script-animation .a1 {
-    white-space: nowrap;
-    border-right: .15em solid transparent;
-    overflow: hidden;
-    width: 0;
-    color: white;
-    animation: index 3s steps(60, end) forwards,
-    blink .8s 5;
-    animation-delay: 1s;
-    transition-delay: 1s; 
-}
-
-.script-animation .a2 {
-    white-space: nowrap;
-    border-right: .15em solid transparent;
-    overflow: hidden;
-    width: 0;
-    color: white;
-    animation: index 3s steps(40, end) forwards,
-    blink .8s 5;
-    animation-delay: 5s;
-    transition-delay: 5s;   
-
-}
-
-.script-animation .a3 {
-    white-space: nowrap;
-    border-right: .15em solid transparent;
-    overflow: hidden;
-    width: 0;
-    color: white;
-    animation: index 3s steps(40, end) forwards,
-    blink .8s infinite;
-    animation-delay: 9s;
-    transition-delay: 9s;
-}
-
-/* KEY FRAMES */
+    .slide3 .a1 {
+        animation-delay: 1s;
+        transition-delay: 1s; 
+        }
+    .slide3 .a2 {
+        animation-delay: 2.5s;
+        transition-delay: 2.5s; 
+        }
+    .slide3 .a3 {
+        animation-delay: 4s;
+        transition-delay: 4s; 
+        }
+    .slide3 .a4 {
+        animation-delay: 5.5s;
+        transition-delay: 5.5s; 
+        }
+    .slide3 .a5 {
+        animation-delay: 7s;
+        transition-delay: 7s; 
+        }
+    .slide3 .a6 {
+        animation-delay: 8.5s;
+        transition-delay: 8.5s; 
+        }
+        
+       /* KEY FRAMES */
 
 @keyframes subheaderbtn {
     0% { top: 0px;}
@@ -464,7 +467,6 @@ header {
     
 }
 
-
 /* REPONSIVE CSS */
 
 @media only screen and (max-width: 1000px) {
@@ -476,9 +478,6 @@ header {
         font-size: 16px;
     }
 
-    #animations p {
-        font-size: 13px;
-    }
   }
 
 @media only screen and (max-width: 800px) {
@@ -494,15 +493,10 @@ header {
         display: block;
     }
 
-    #animations p {
-        font-size: 13px;
-    }
   }
 
   @media only screen and (max-width: 650px) {
-    #logo h1 { 
-        font-size: 25px;
-    }
+    
 
     #menu-nav {
         display: none;
@@ -512,10 +506,6 @@ header {
         display: block;
     }
 
-    #animations p {
-        font-size: 13px;
-    }
-    
     .logo-content p {
         font-size: 13px;
     }

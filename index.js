@@ -1,9 +1,6 @@
 window.addEventListener("scroll", function(){
     let header = document.querySelector(".header")
-    let headerScroll = document.querySelector(".header-scroll")
     let scroll = this.scrollY
-    const height = window.innerHeight;
-    const vhPixels = height * 1
     if (scroll > 100) {
         header.classList.remove("header-back")
         header.classList.add("header-scroll")
@@ -31,6 +28,34 @@ var submenuItem = document.querySelectorAll(".sub-header-item")
    })
 } 
 
+
+function plusslide(n) {
+    
+}
+
+
+
+
+ /*
+ slideN = 1
+ slide[1-1]0 = slideT[1+1]2
+ slide[1]1 = slideT[1-1]0
+ slide[1+1]2 = slideT[1]1
+]
+ slideN = 2
+ slide[2-2]0 = slideT[2]2
+ slide[2-1]1 = slideT[2-2]0
+ slide[2]2= slideT[2-1]1
+]
+ slideN = 3
+ slide[3-3]0 = slideT[3-1]2
+ slide[3-2]1 = slideT[3-3]0
+ slide[3-1]2 = slideT[3-2]1
+]
+ 
+
+
+ 
  function currentsub(n) {
     let a1 = document.querySelector(".index-animation")
     let a2 = document.querySelector(".style-animation")
@@ -58,6 +83,8 @@ var submenuItem = document.querySelectorAll(".sub-header-item")
 
     }}
 
+    */
+
 // MOBILE MENU //
 
 function showmobile() {
@@ -81,12 +108,6 @@ function showmobile() {
             menuMobileList.style.display = "block"
         }
     }
-
-
-    
-
-
-
 
 /* HEADER ANIMATION CODE */
 
@@ -118,16 +139,6 @@ function showmobile() {
 
 
 
- /* function scaleNavFunction() { 
-    for(const values in navItens) {
-        navItens[values].style.transform = "scale(1,1.5)"
-    }
-    
-}
 
-navItens.addEventListener("mouseover", scaleNavFunction())
-
-
-*/
 
 
