@@ -290,7 +290,7 @@ header {
     display: none;
     cursor: pointer;
     position: absolute;
-    left: 0px;
+    left: -10px;
     color: white;
     top: 45%
     } .prev::before {
@@ -303,7 +303,7 @@ header {
     display: none;
     cursor: pointer;
     position: absolute;
-    right: 0px;
+    right: 0;
     color: white;
     top: 45%;
     } .next::before {
@@ -410,7 +410,6 @@ header {
 @keyframes headerback {
     0% {opacity: 0; left: 300px ; }
     100% {opacity: 1; left: 0px; background-image:linear-gradient(to bottom, transparent, transparent);}
-    
 }
 
 @keyframes pulse {
@@ -441,12 +440,52 @@ header {
 }
 
 
+@media only screen and (max-width: 1150px) {
+    #slides {
+        padding: 40px;
+        width: 800px;
+        height: 500px;
+    }
+    
+    .slide {
+        min-width: 590px;
+        min-height: 250px;
+    }
+    
+    #slides p {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
 
-/*33% {position: absolute; left:33%; top: 50%;}
-    66% {position: absolute; left: 66%; top:20%}
-/*-------------------------- RESPONSIVITY ------------------------*/
+    .next {
+        top: 42%;
+    }
 
-@media only screen and (max-width: 1000px) {
+    .prev {
+        top: 42%;
+    }
+    
+}   
+
+
+@media only screen and (max-width: 950px) {
+
+    #slides {
+        padding: 40px;
+        width: 680px;
+        height: 500px;
+    }
+    
+    .slide {
+        min-width: 490px;
+        min-height: 240px;
+    }
+    
+    #slides p {
+        font-size: 17px;
+        margin-bottom: 5px;
+    }
+
     #logo h1 { 
         font-size: 30px;
     }
@@ -455,9 +494,34 @@ header {
         font-size: 16px;
     }
 
+    .next {
+        top: 40%;
+    }
+
+    .prev {
+        top: 40%;
+    }
+
   }
 
 @media only screen and (max-width: 800px) {
+
+    #slides {
+        padding: 40px;
+        width: 500px;
+        height: 500px;
+    }
+    
+    .slide {
+        min-width: 433px;
+        min-height: 240px;
+    }
+    
+    #slides p {
+        font-size: 15px;
+        margin-bottom: 5px;
+        
+    }
     #logo h1 { 
         font-size: 30px;
     }
@@ -470,10 +534,33 @@ header {
         display: block;
     }
 
+    .next {
+        top: 38%;
+    }
+
+    .prev {
+        top: 38%;
+    }
+
   }
 
   @media only screen and (max-width: 650px) {
+    #slides {
+        padding: 40px;
+        width: 340px;
+        height: 500px;
+    }
     
+    .slide {
+        min-width: 290px;
+        min-height: 240px;
+    }
+    
+    #slides p {
+        font-size: 10px;
+        margin-bottom: 5px;
+        
+    }
 
     #menu-nav {
         display: none;
@@ -485,6 +572,53 @@ header {
 
     .logo-content p {
         font-size: 13px;
+    }
+
+    .next {
+        top: 32%;
+    }
+
+    .prev {
+        top: 32%;
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    #slides {
+        padding: 40px;
+        width: 280px;
+        height: 500px;
+    }
+    
+    .slide {
+        min-width: 260px;
+        min-height: 240px;
+    }
+    
+    #slides p {
+        font-size: 9px;
+        margin-bottom: 5px;
+        
+    }
+
+    #menu-nav {
+        display: none;
+    }
+
+    #menu-nav-mobile {
+        display: block;
+    }
+
+    .logo-content p {
+        font-size: 13px;
+    }
+
+    .next {
+        top: 32%;
+    }
+
+    .prev {
+        top: 32%;
     }
   }
 
