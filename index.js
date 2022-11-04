@@ -1,3 +1,5 @@
+/*----------------------FIXED HEADER SCROLL------------------------*/
+
 window.addEventListener("scroll", function(){
     let header = document.querySelector(".header")
     let scroll = this.scrollY
@@ -9,83 +11,71 @@ window.addEventListener("scroll", function(){
         header.classList.add("header-back")
         
     }
+});
+
+/*----------------------FLOAT BUTTON------------------------*/
+
+let floatBtn = document.querySelector("#float-btn")
+let slides = document.querySelector(".slide")
+let nextBtn = document.querySelector(".next")
+let prevBtn = document.querySelector(".prev")
+let subItem = document.querySelectorAll(".sub-header-item")
+
+
+floatBtn.addEventListener("click", function(){
+
+    slides.style.display = "block"
+    floatBtn.classList.replace("float-btn-normal", "float-btn-press")
+    nextBtn.style.display = "block"
+    prevBtn.style.display = "block"
+    subItem[0].className += " sub-header-active"
+
 })
 
-// SUB HEADER CODE //
+/*----------------------SLIDE------------------------*/
 
-var submenuItem = document.querySelectorAll(".sub-header-item")
+let slideN = 0
 
+function currentslide(n){
+    let i;
+    slideN = n
+    let slides = document.querySelectorAll(".slide")
+    let subItem = document.querySelectorAll(".sub-header-item")
 
- for(let i in submenuItem) {
-    submenuItem[i].addEventListener("click", function(){
-        var currentActive = document.getElementsByClassName("sub-header-active")
+    floatBtn.classList.replace("float-btn-normal", "float-btn-press")
+    nextBtn.style.display = "block"
+    prevBtn.style.display = "block"
 
-        if (currentActive.length > 0) {
-            currentActive[0].className = currentActive[0].className.replace(" sub-header-active", "")
-        }
+    for(i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"
+    }
+    for(i = 0; i < slides.length; i++) {
+        subItem[i].className = subItem[i].className.replace(" sub-header-active", "")
+    }
 
-        this.className += " sub-header-active" 
-   })
-} 
-
-
-function plusslide(n) {
-    
+    slides[slideN-1].style.display = "block"
+    subItem[slideN-1].className += " sub-header-active"
 }
 
+function pslide(n) {
+    let i;
+    slideN += n
+    let slides = document.querySelectorAll(".slide")
+    let subItem = document.querySelectorAll(".sub-header-item")
+    if(slideN > slides.length) {slideN = 1}
+    if(slideN <1 ) {slideN = slides.length}
+    for(i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"
+    }
 
+    for(i = 0; i < slides.length; i++) {
+        subItem[i].className = subItem[i].className.replace(" sub-header-active", "")
+    }
 
+    slides[slideN-1].style.display = "block"
+    subItem[slideN-1].className += " sub-header-active"
+}
 
- /*
- slideN = 1
- slide[1-1]0 = slideT[1+1]2
- slide[1]1 = slideT[1-1]0
- slide[1+1]2 = slideT[1]1
-]
- slideN = 2
- slide[2-2]0 = slideT[2]2
- slide[2-1]1 = slideT[2-2]0
- slide[2]2= slideT[2-1]1
-]
- slideN = 3
- slide[3-3]0 = slideT[3-1]2
- slide[3-2]1 = slideT[3-3]0
- slide[3-1]2 = slideT[3-2]1
-]
- 
-
-
- 
- function currentsub(n) {
-    let a1 = document.querySelector(".index-animation")
-    let a2 = document.querySelector(".style-animation")
-    let a3 = document.querySelector(".script-animation")
-    let logo = document.querySelector(".logo-content")
-    
-
-    if (n == 1) {
-
-            a1.style.display = "block"
-            a2.style.display = "none"
-            a3.style.display = "none"
-  
-    } else if (n == 2) {
-            
-            a1.style.display = "none"
-            a2.style.display = "block"
-            a3.style.display = "none"
-            
-    } else if (n == 3) {
-            
-            a1.style.display = "none"
-            a2.style.display = "none"
-            a3.style.display = "block"
-
-    }}
-
-    */
-
-// MOBILE MENU //
 
 function showmobile() {
         let navMobile = document.querySelector("#menu-nav-mobile")
@@ -109,15 +99,6 @@ function showmobile() {
         }
     }
 
-/* HEADER ANIMATION CODE */
-
-
-
-
-
-
-
-//MAIN CODE // 
 
 
 
