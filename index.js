@@ -14,12 +14,13 @@ window.addEventListener("scroll", function(){
 });
 
 /*----------------------FLOAT BUTTON------------------------*/
-
+let about = document.querySelector("#menu-item-2")
 let floatBtn = document.querySelector("#float-btn")
 let slides = document.querySelector(".slide")
 let nextBtn = document.querySelector(".next")
 let prevBtn = document.querySelector(".prev")
 let subItem = document.querySelectorAll(".sub-header-item")
+let dots = document.querySelectorAll(".dots-conteiner li")
 
 
 floatBtn.addEventListener("click", function(){
@@ -29,8 +30,22 @@ floatBtn.addEventListener("click", function(){
     nextBtn.style.display = "block"
     prevBtn.style.display = "block"
     subItem[0].className += " sub-header-active"
+    dots[0].className += " dots-active"
 
 })
+
+about.addEventListener("click", function(){
+
+    slides.style.display = "block"
+    floatBtn.classList.replace("float-btn-normal", "float-btn-press")
+    nextBtn.style.display = "block"
+    prevBtn.style.display = "block"
+    subItem[0].className += " sub-header-active"
+    dots[0].className += " dots-active"
+
+})
+
+
 
 /*----------------------SLIDE------------------------*/
 
@@ -41,6 +56,7 @@ function currentslide(n){
     slideN = n
     let slides = document.querySelectorAll(".slide")
     let subItem = document.querySelectorAll(".sub-header-item")
+    let dots = document.querySelectorAll(".dots-conteiner li")
 
     floatBtn.classList.replace("float-btn-normal", "float-btn-press")
     nextBtn.style.display = "block"
@@ -52,9 +68,13 @@ function currentslide(n){
     for(i = 0; i < slides.length; i++) {
         subItem[i].className = subItem[i].className.replace(" sub-header-active", "")
     }
+    for(i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" dots-active", "")
+    }
 
     slides[slideN-1].style.display = "block"
     subItem[slideN-1].className += " sub-header-active"
+    dots[slideN-1].className += " dots-active"
 }
 
 function pslide(n) {
@@ -62,6 +82,8 @@ function pslide(n) {
     slideN += n
     let slides = document.querySelectorAll(".slide")
     let subItem = document.querySelectorAll(".sub-header-item")
+    let dots = document.querySelectorAll(".dots-conteiner li")
+
     if(slideN > slides.length) {slideN = 1}
     if(slideN <1 ) {slideN = slides.length}
     for(i = 0; i < slides.length; i++) {
@@ -71,9 +93,13 @@ function pslide(n) {
     for(i = 0; i < slides.length; i++) {
         subItem[i].className = subItem[i].className.replace(" sub-header-active", "")
     }
+    for(i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" dots-active", "")
+    }
 
     slides[slideN-1].style.display = "block"
     subItem[slideN-1].className += " sub-header-active"
+    dots[slideN-1].className += " dots-active"
 }
 
 
