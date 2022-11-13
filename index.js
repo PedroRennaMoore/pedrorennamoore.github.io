@@ -125,6 +125,29 @@ function showmobile() {
         }
     }
 
+let portifolio = document.querySelectorAll(".portifolio")
+
+for(let i in portifolio) {
+    portifolio[i].addEventListener("mouseover", function(){
+        for(let n in portifolio) {
+            portifolio[n].style.display = "none"
+        }
+
+        
+
+        
+
+    })
+}
+
+let closeBtn = document.querySelector(".portifolio-hover::after")
+
+    closeBtn.addEventListener("click", function(){
+        portifolio.className.remove("portifolio-hover")
+    })
+
+
+
 
 
 

@@ -407,6 +407,60 @@ header {
         transition-delay: 8.5s; 
     }
 
+    /*-------------------------- PORTIFOLIO-----------------------*/
+#portifolio {
+    text-align: center;
+    margin-top: 65px;
+    position: relative;
+}
+
+#portifolio h2 {
+    color: #C586C0;
+}
+#portifolio-conteiner {
+    margin: 65px 0 65px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.portifolio {
+    margin: 20px;
+    
+}
+
+.portifolio img {
+    width: 300px;
+    border-radius: 3px;
+}
+
+.portifolio-hover {
+    z-index: 5;
+    position: fixed;
+    top: 45%;
+    padding: 20px;
+    transform: scale(3,3);
+    background-color: rgba(0, 0, 0, 0.73);
+    transition: 1s;
+    border-radius: 2px;
+}
+
+.close-btn {
+    color: black;
+    position: absolute;
+    right: 4px;
+    top: 2px;
+    color: white;
+    font-size: 5px;
+    cursor: pointer;
+    z-index: 6;
+    font-weight: 600;
+
+}
+
 
     /*-------------------------- CONTACT ------------------------*/
 
