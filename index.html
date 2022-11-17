@@ -94,47 +94,50 @@
         <section id="portifolio">
             <h2>Portifolio {}</h2>
             <div id="portifolio-conteiner">
-                <div class="portifolio">
-                    <img src="images/portifolio1.png" alt="">
-                    <h3>website 1</h3>
-                    <a class="close-btn">&#x2715;</a>
+                <div class="portifolio" >
+                    <img src="images/portifolio1.png" alt="1" onclick="myFunction(this);">
+                    <p>website 1</p>
+                </div>
+                <div class="portifolio" >
+                    <img src="images/portifolio1.png" alt="2" onclick="myFunction(this);">
+                    <p>website 2</p>
                 </div>
                 <div class="portifolio">
-                    <img src="images/portifolio1.png" alt="">
-                    <h3>website 2</h3>
-                    <a class="close-btn">&#x2715;</a>
+                    <img src="images/portifolio1.png" alt="3" onclick="myFunction(this);">
+                    <p>website 3</p>
                 </div>
                 <div class="portifolio">
-                    <img src="images/portifolio1.png" alt="">
-                    <h3>website 3</h3>
-                    <a class="close-btn">&#x2715;</a>
+                    <img src="images/portifolio1.png" alt="4" onclick="myFunction(this);">
+                    <p>website 4</p>
                 </div>
                 <div class="portifolio">
-                    <img src="images/portifolio1.png" alt="">
-                    <h3>website 4</h3>
-                    <a class="close-btn">&#x2715;</a>
+                    <img src="images/portifolio1.png" alt="5" onclick="myFunction(this);">
+                    <p>website 5</p>
                 </div>
                 <div class="portifolio">
-                    <img src="images/portifolio1.png" alt="">
-                    <h3>website 5</h3>
-                    <a class="close-btn">&#x2715;</a>
+                    <img src="images/portifolio1.png" alt="6" onclick="myFunction(this);">
+                    <p>website 6</p>
                 </div>
                 <div class="portifolio">
-                    <img src="images/portifolio1.png" alt="">
-                    <h3>website 6</h3>
-                    <a class="close-btn">&#x2715;</a>
+                    <img  src="images/portifolio1.png" alt="7" onclick="myFunction(this);">
+                    <p>website 7</p>
                 </div>
                 <div class="portifolio">
-                    <img src="images/portifolio1.png" alt="">
-                    <h3>website 7</h3>
-                    <a class="close-btn">&#x2715;</a>
-                </div>
-                <div class="portifolio">
-                    <img src="images/portifolio1.png" alt="">
-                    <h3>website 8</h3>
-                    <a class="close-btn">&#x2715;</a>
+                    <img src="images/portifolio1.png" alt="8" onclick="myFunction(this);">
+                    <p>website 8</p>
                 </div>
             </div>
+            <div class="portifolio-zoom">
+                <span onclick="this.parentElement.style.display='none'" class="close-btn">&times;</span>
+
+                <img id="img-zoom" style="width: 60vw;">
+
+                <div id="imgtext" style="color: white; margin-top: 10px; "></div>
+
+                <a class="p-prev" onclick="pPlusSlide(-1)">&#10094;</a>
+                <a class="p-next" onclick="pPlusSlide(1)">&#10095;</a>
+            </div>
+
         </section>
 
         <section id="contact-container">

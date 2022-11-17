@@ -125,26 +125,37 @@ function showmobile() {
         }
     }
 
-let portifolio = document.querySelectorAll(".portifolio")
+var portifolioN = 0
+var number = 0
 
-for(let i in portifolio) {
-    portifolio[i].addEventListener("mouseover", function(){
-        for(let n in portifolio) {
-            portifolio[n].style.display = "none"
-        }
 
-        
+function myFunction(imgs) {
+    var expandImg = document.getElementById("img-zoom");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.nextElementSibling.innerHTML
+    expandImg.parentElement.style.display = "block";
+    number = Number(imgs.alt)
+    if(number > 0) {portifolioN = number}
+    else if (number = 0) {portifolioN = 0}
+    }
 
-        
+function pPlusSlide(n) {
 
-    })
-}
+    portifolioN += n
+    var portifolioImg = document.querySelectorAll(".portifolio img")
+    var ImgIndex = document.getElementById("img-zoom");
+    var imgText = document.getElementById("imgtext");
+    var portifolioText = document.querySelectorAll(".portifolio p")
+    
+    if (portifolioN > portifolioImg.length) {portifolioN = 1}
+    else if (portifolioN < 1) {portifolioN = portifolioImg.length}
 
-let closeBtn = document.querySelector(".portifolio-hover::after")
+    ImgIndex.src = portifolioImg[portifolioN-1].src
+    imgText.innerHTML = portifolioText[portifolioN-1].innerHTML
+ }
 
-    closeBtn.addEventListener("click", function(){
-        portifolio.className.remove("portifolio-hover")
-    })
+
 
 
 

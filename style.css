@@ -423,12 +423,11 @@ header {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-
-
 }
 
 .portifolio {
     margin: 20px;
+    cursor: pointer;
     
 }
 
@@ -437,29 +436,59 @@ header {
     border-radius: 3px;
 }
 
-.portifolio-hover {
+.portifolio-text {
+    color: black;
+}
+
+.portifolio-zoom {
     z-index: 5;
     position: fixed;
-    top: 45%;
-    padding: 20px;
-    transform: scale(3,3);
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    padding: 50px 50px 20px 50px;
     background-color: rgba(0, 0, 0, 0.73);
-    transition: 1s;
+    animation: portifolio-animation 0.5s forwards ;
     border-radius: 2px;
+    display: none;
 }
+
+#img-zoom {
+    animation: portifolio-animation 0.5s forwards ;
+}
+
 
 .close-btn {
     color: black;
     position: absolute;
-    right: 4px;
-    top: 2px;
+    right: 14px;
+    top: 0px;
     color: white;
-    font-size: 5px;
+    font-size: 30px;
     cursor: pointer;
     z-index: 6;
     font-weight: 600;
 
 }
+
+.p-prev {
+    position: absolute;
+    left: 20px;
+    color: white;
+    top: 50%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.p-next {
+    position: absolute;
+    right: 20px;
+    color: white;
+    top: 50%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
 
 
     /*-------------------------- CONTACT ------------------------*/
@@ -594,6 +623,11 @@ footer p {
 @keyframes headerfixed {
     0% {right: 300px; opacity: 0;}
     100% {right: 0px; opacity: 1;}
+}
+
+@keyframes portifolio-animation {
+    0% {left: 20%; opacity: 0;}
+    100% {left: 50% ; opacity: 1;}
 }
 
 @keyframes headerback {
